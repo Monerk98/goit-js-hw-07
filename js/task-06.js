@@ -23,7 +23,7 @@ const colorChange = () => {
     focus.classList.add('invalid');
   }
   
-  focus.addEventListener('focus', colorChange);
+  focus.addEventListener('change', colorChange);
 
 //   console.log(focus)
 
