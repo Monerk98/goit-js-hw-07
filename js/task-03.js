@@ -25,15 +25,3 @@ images.forEach(el => {
 //  `<li><img src="${el.url}" alt="${el.alt}"></li>`);
 
 
-const makeGallary = ({url, alt}) => `
-  <li>
-    <img src=${url} alt=${alt}>
-  </li>`
-;
-
-const lists = images.map(makeGallary).join('+')
-
-const gallary = document.querySelector('#gallery');
-gallary.insertAdjacentHTML("afterbegin", lists);
-console.log(lists)
-
