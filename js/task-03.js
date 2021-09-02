@@ -13,15 +13,21 @@ const images = [
     },
   ];
 
-const pics = document.querySelector('#gallery')
 
-images.forEach(el => {
-    pics.insertAdjacentHTML('afterbegin',
-    `<li><img src="${el.url}" alt="${el.alt}" width = "450" height = "300"></li>`);
-})
 
-// for(let el of images) 
-// document.querySelector('#gallery').insertAdjacentHTML('afterbegin',
-//  `<li><img src="${el.url}" alt="${el.alt}"></li>`);
+
+const aboutGal = ({url,alt}) =>
+`<li>
+<img src = ${url} alt=${alt}>
+</li>
+`;
+
+const block = images.map(aboutGal).join('');
+const gal = document.querySelector('#gallery')
+gal.insertAdjacentHTML("afterbegin", block)
+
+
+
+
 
 
